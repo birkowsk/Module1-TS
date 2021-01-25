@@ -6,7 +6,7 @@ function generateArrayWithRandomNumbers(howManyNumbers = 10, min = 1, max = 10):
   throwsErrorWhenMaxLowerThanMax(min, max);
 
   const arrayOfTen: number[] = new Array(howManyNumbers);
-  const randomArray = arrayOfTen.fill(0).map((_) => Math.floor(Math.random() * max) + min);
+  const randomArray = arrayOfTen.fill(0).map((_) => Math.floor(Math.random() * (max - min) ) + min);
   return randomArray;
 }
 
